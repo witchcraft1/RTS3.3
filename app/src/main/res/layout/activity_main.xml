@@ -132,7 +132,7 @@
         android:layout_marginEnd="64dp"
         android:layout_marginRight="64dp"
         android:gravity="center"
-        android:text="ВВедіть коефіцієнти рівняння"
+        android:text="Введіть коефіцієнти рівняння"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -151,6 +151,37 @@
         android:text="        X1 +        X2+        X3+        X4 =        "
         android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titleText3"
+        android:layout_width="284dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="63dp"
+        android:layout_marginLeft="63dp"
+        android:layout_marginTop="220dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginRight="64dp"
+        android:gravity="center"
+        android:text="Введіть кількість мутацій"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/mutations"
+        android:layout_width="50dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="288dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number"
+        android:text="1"
+        android:textColorHint="#6E746F"
+        android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -194,4 +225,6 @@
         app:layout_constraintHorizontal_bias="0.519"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/resultText" />
+
+    
 </androidx.constraintlayout.widget.ConstraintLayout>

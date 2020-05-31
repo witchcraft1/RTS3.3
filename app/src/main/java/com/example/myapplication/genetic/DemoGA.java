@@ -16,10 +16,16 @@ public class DemoGA {
     private Chromosome[] population;
     private int sizeOfPopulation = 4;
     private int genesCount;
+    private int mutationCount = 1;
     private int[] fitness;
     private double[] survival;
     private Chromosome winner;
     private int generations = 1;
+
+    public DemoGA(int[] coeffs,int Y, int mutationCount){
+        this(coeffs,Y);
+        this.mutationCount = mutationCount;
+    }
 
     public DemoGA(int ...coeffsAndY){
        this(Arrays.copyOfRange(coeffsAndY, 0, coeffsAndY.length-1), coeffsAndY[coeffsAndY.length-1]);
@@ -79,7 +85,10 @@ public class DemoGA {
 //        Chromosome worst = population[getWorst(fits)];
         int index = RANDOM.nextInt(genesCount);
 //        worst.setGene(index, RANDOM.nextInt(Y));
-        population[RANDOM.nextInt(sizeOfPopulation)].setGene(index,RANDOM.nextInt(Y));
+        for (int i = 0; i < mutationCount; i++) {
+            population[RANDOM.nextInt(sizeOfPopulation)].setGene(index,RANDOM.nextInt(Y));
+            index = RANDOM.nextInt(genesCount);
+        }
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)

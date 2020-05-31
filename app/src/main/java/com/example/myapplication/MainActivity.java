@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         EditText B = findViewById(R.id.editB);
         EditText C = findViewById(R.id.editC);
         EditText D = findViewById(R.id.editD);
-
+        EditText Mutations = findViewById(R.id.mutations);
 
         TextView resultText = findViewById(R.id.resultText);
         TextView timeText = findViewById(R.id.timeText);
@@ -36,7 +36,8 @@ public class MainActivity extends AppCompatActivity {
                 || B.getText().toString().trim().equals("")
                 || C.getText().toString().trim().equals("")
                 || D.getText().toString().trim().equals("")
-                || equals.getText().toString().trim().equals("")){
+                || equals.getText().toString().trim().equals("")
+                || Mutations.getText().toString().trim().equals("")){
             resultText.setText("Введіть вірні дані!");
             return;
         }
@@ -47,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         int b = Integer.parseInt(B.getText().toString());
         int c = Integer.parseInt(C.getText().toString());
         int d = Integer.parseInt(D.getText().toString());
-
+        int mutations = Integer.parseInt(Mutations.getText().toString());
         long time = System.currentTimeMillis();
 
         int[] arr = new int[]{a,b,c,d};
